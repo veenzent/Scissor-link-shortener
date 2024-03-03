@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    font-family: 'lato', sans-serif;
+    color: rgb(134, 165, 177);
+    line-height: 1.6;
+    background-color: rgb(70, 35, 11);
+}
+
+
+
+
+ul{
+    list-style-type: none; 
+}
+
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+
+
+/* -----------------------------This Is Navbar Section-------------- */
+
+
+#check {
+    display: none;
+}
+
+.menu-bar{
+    float: right;
+    line-height: 70px;
+    display: none;
+}
+
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+
+
+.navbar ul {
+
+    margin-left: 3em; 
+}
+
+.navbar ul li hi {
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    padding-top: 8px;
+
+}
+
+
+
+.navbar ul li hi span {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navbar ul hu {
+    padding-top: 18px;
+    margin-left: 30em;
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+.navbar a {
+    color: #fff;
+    padding: 15px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.navbar a span {
+    color: rgb(233, 136, 136);
+    font-size: 20px;
+    
+}
+
+
+ .navbar a:hover{
+ color: brown;
+} 
+
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+
+
+
+/* --------------------Showcase section------------ */
+
+
+.showcase-text {
+    margin-top: 4em;
+    display: flex;
+}
+
+
+.showcase-text h1 {
+    font-size: 50px;
+    line-height: 100px;
+    margin-left: 2em;
+    color: rgb(207, 198, 198);
+    font-weight: bolder;
+}
+
+
+.showcase-text h1 span {
+    color: rgb(233, 136, 136);;
+}
+
+
+.showcase-text h2 {
+    position: absolute;
+    margin-left: 4.5em;
+    margin-top: 11em;
+}
+
+.showcase-text img {
+    margin-left: 20em;
+    margin-top: 4em;
+    width: 400px;
+}
+
+.showcase-text a {
+    color: white;
+    position: absolute;
+    margin-top: 20em;
+    margin-left: 8em;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: rgb(224, 159, 18);
+    width: 200px;
+    padding-left: 40px;
+    border-radius: 30px;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+
+/* ----------------------------media query code start here----------------------- */
+@media screen and (max-width:1556px) {
+    .nav ul li a{
+        padding: 0px 15px;
+    
+    }
+
+    .navbar ul li hi {
+        font-size: 25px;
+        font-weight: 900;
+    
+    }
+    .navbar ul hu {
+        padding-top: 18px;
+        margin-left: 15em;
+        font-weight:300
+    }
+    
+    
+    
+    .navbar ul li hi span {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+}
+    
+    /* ----------------------------media query code for second break-point start here----------------------- */
+@media screen and (max-width:1309px) {
+
+
+    .showcase-text img {
+        margin-left: 15em;
+        margin-top: 4em;
+        width: 350px;
+    }
+
+    .nav ul li a{
+        padding: 0px 5px;
+    
+    }
+
+
+    .navbar ul hu {
+        margin-left: 12em;
+        font-weight:300;
+        font-style: italic;
+        
+    }
+    
+    .navbar ul li hi span {
+        font-size: 30px;
+        font-weight: 400;
+        font-style: italic;
+    }
+   
+    .showcase-text h1 {
+        font-size: 45px;
+        line-height: 80px;
+        margin-left: 2em;
+        color: rgb(207, 198, 198);
+        font-weight: bolder;
+    }
+    
+    
+    .showcase-text h1 span {
+        color: rgb(233, 136, 136);;
+    }
+    
+    
+    h1, h2 {
+        font-size:larger;
+        line-height: 1.7;
+        font-style: italic;
+
+    }
+    
+    
+    
+
+}
+
+
+    
+   /* here is the mobile phone design */
+
+   @media (min-width:300px) and (max-width:1121px) {
+
+    .container{ 
+        background-color: rgb(70, 35, 11);
+    }  
+    
+    .nav ul li {
+        padding: 5px 0px;
+        display: block;
+        margin-left: 30px;
+    
+    }
+
+
+
+    .navbar ul hu {
+        flex-direction: column;
+        background-color: blue;
+        width: 50%;
+        position: absolute;
+        top: 13%;
+        height: 45vh;
+        right:40%;
+        text-align: left;
+        border-radius: 20px;    
+        
+    }   
+    
+    .showcase-text {
+        margin-top: 4em;
+        flex-direction: column;
+    }
+
+
+    .showcase-text h1 {
+        font-size: 25px;
+        line-height: 35px;
+        margin-left: 2.5em;
+        color: rgb(207, 198, 198);
+        font-weight: bold;
+        margin-top: 17em;
+    }
+
+    h2 {
+        font-size: 17px;
+        line-height: 1.5;
+        font-style: italic;
+        top: 25em;
+        
+        
+
+    }
+    
+
+    .showcase-text a {
+        color: white;
+        position: absolute;
+        margin-top: 31em;
+        margin-left: 10em;
+        font-family: sans-serif;
+        font-size: 20px;
+        background-color: rgb(224, 159, 18);
+        width: 170px;
+        height: 40px;
+        padding-left: 22px;
+        padding-top: 4px;
+        border-radius: 30px;
+        font-weight: lighter;
+    }
+    
+    .showcase-text img {
+        margin-left: 23em;
+        margin-top: 26em;
+        width: 130px;
+        position: absolute;
+    }
+
+
+    
+    
+/* here is my code for menu bar media query */
+
+  #check:checked ~ ul {
+        left: 6%;
+        }
+
+
+
+.menu-bar{
+    display: block;
+    position: absolute;
+    top: 6em;
+    right: 8em;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.menu-bar i{
+    font-size: 30px;
+   
+}
+
+  
+}
+
+
+
+
+
