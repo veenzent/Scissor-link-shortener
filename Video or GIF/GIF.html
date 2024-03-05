@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video or GIF </title>
+    <title>Shorten-URL </title>
     <link rel="stylesheet" href="GIF.css">
 </head>
 <body>
@@ -21,13 +21,13 @@
                 <ul> 
                     <li> <hi> <a href="/Scissor.html">Scissor<span>.io</span></a> </li> </hi>
                     <hu>
-                    <li><a href="/Features/Features.html">Features</a></li>
-                    <li><a href="../Video or GIF/GIF.html">Video or GIF</a></li>
-                    <li><a href="../Simplicity/Simplicity.html">Simplicity</a></li>
-                    <li><a href="/Reach/Reach.html">Reach</a></li>
-                    <li><a href="/Branding/Branding.html">Branding</a></li>
-                    <li><a href="/Insight/Insight.html">Insights</a></li>
-                    <li><a href="/Get Started/Get Started.html">Get Started</a></li>
+                        <li><a href="/Features/Features.html">Features</a></li>
+                        <li><a href="/Video or GIF/GIF.html">Shorten URL</a></li>
+                        <li><a href="/Branding/Branding.html">Customize URL</a></li>
+                        <!-- <li><a href="Simplicity/Simplicity.html">Customize URL</a></li> -->
+                        <li><a href="/Reach/Reach.html">Generate QRCode</a></li>
+                        <li><a href="/Insight/Insight.html">Analytics</a></li>
+                        <li><a href="/Get Started/Get Started.html">Get Started</a></li>
                     </hu>
                 </ul>
             </nav>
@@ -41,12 +41,18 @@
     
     <p>
     <!-- <label for="">Full name</label> <br> -->
-    <input type="text" name="Full Name" id="" placeholder="Paste Your Link Here">
+    <input type="text" name="Full Name" id="shorten-url" placeholder="Paste Your Link Here">
 
-    <a href="features.html" class="btn btn-outline">Shorten Your link</a>
+    <a onclick="shortenUrl()" href="features.html" class="btn btn-outline shorten-url">Shorten Your link</a>
+
+    <!-- shortened-url-section -->
+    <div id="shortened-url-section">
+        <p id="shortened-url">Your shortened URL</p>
+        <a href="" class="shortened-url"></a>
+    </div>
     
    </p>
 </div>
-    
+<script src="./Scissor.js"></script>
 </body>
 </html>
