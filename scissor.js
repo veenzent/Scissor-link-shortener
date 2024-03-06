@@ -21,7 +21,9 @@ fetchData();
 
 
 // link to shorten
-const url = document.getElementById("shorten-url")
+const urlToShorten = document.getElementById("shorten-url")
+const shortenLnkBtn = document.getElementByquerySelector(".shorten-url");
+// console.log(urlToShorten.value);
 async function shortenUrl() {
     try {
         const response = await fetch("http://127.0.0.1:8000/shorten-url", {
@@ -29,7 +31,7 @@ async function shortenUrl() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ target_url: url.value }),
+            body: JSON.stringify({ target_url: urlToShorten.value }),
         });
         if (!response.ok) {
             throw Error(response.statusText);
@@ -41,3 +43,5 @@ async function shortenUrl() {
         console.error("Error fetching data: ", error);
     }
 }
+
+shortenLnkBtn.addEventListener("click", shortenUrl())
