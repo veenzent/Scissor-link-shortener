@@ -1,29 +1,29 @@
 
-async function fetchData() {
-    try {
-        // const response = await fetch("https://scissor-url.onrender.com/k1UAw/qrcode");
-        const response = await fetch("https://scissor-url.onrender.com");
-        // const response = await fetch("http://127.0.0.1:8000/");
-        if (!response.ok) {
-            throw Error(response.statusText);
-        } else {
-            const data = await response.json();
-            console.log(data);
-        }
+// async function fetchData() {
+//     try {
+//         // const response = await fetch("https://scissor-url.onrender.com/k1UAw/qrcode");
+//         const response = await fetch("https://scissor-url.onrender.com");
+//         // const response = await fetch("http://127.0.0.1:8000/");
+//         if (!response.ok) {
+//             throw Error(response.statusText);
+//         } else {
+//             const data = await response.json();
+//             console.log(data);
+//         }
 
-    } catch (error) {
-        console.error("Error fetching data: ", error);
-    }
-}
+//     } catch (error) {
+//         console.error("Error fetching data: ", error);
+//     }
+// }
 
-fetchData();
-
+// fetchData();
 
 
 // link to shorten
 const urlToShorten = document.getElementById("shorten-url")
-const shortenLnkBtn = document.getElementByquerySelector(".shorten-url");
-// console.log(urlToShorten.value);
+const shortenLnkBtn = document.getElementById("shorten-url-btn");
+
+console.log(urlToShorten.value);
 async function shortenUrl() {
     try {
         const response = await fetch("http://127.0.0.1:8000/shorten-url", {
@@ -44,4 +44,4 @@ async function shortenUrl() {
     }
 }
 
-shortenLnkBtn.addEventListener("click", shortenUrl())
+shortenLnkBtn.addEventListener("click", shortenUrl());
