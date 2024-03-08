@@ -1,24 +1,4 @@
-
-// async function fetchData() {
-//     try {
-//         // const response = await fetch("https://scissor-url.onrender.com/k1UAw/qrcode");
-//         const response = await fetch("https://scissor-url.onrender.com");
-//         // const response = await fetch("http://127.0.0.1:8000/");
-//         if (!response.ok) {
-//             throw Error(response.statusText);
-//         } else {
-//             const data = await response.json();
-//             console.log(data);
-//         }
-
-//     } catch (error) {
-//         console.error("Error fetching data: ", error);
-//     }
-// }
-
-// fetchData();
-
-
+// - - - - - - - - - - - URL SHORTENING - - - - - - - - - - - 
 // link to shorten
 const urlToShorten = document.getElementById("shorten-url")
 const shortenLnkBtn = document.getElementById("shorten-url-btn");
@@ -45,3 +25,53 @@ async function shortenUrl() {
 }
 
 shortenLnkBtn.addEventListener("click", shortenUrl());
+
+
+
+// - - - - - - - - - - - CREATING QR CODE - - - - - - - - - - - 
+// link to generate QR Code for:
+const urlForQRCode = "https://get-url-from-document"
+async function generateQrCode() {
+    const response = await fetch(`http://127.0.0.1:8000/${urlForQRCode}/qrcode`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "images/png",
+        }
+    });
+    if (!response.ok) {
+        throw Error(response.statusText);
+    } else {
+        const data = await response.json();
+        console.log(data);
+    }
+}
+
+
+// - - - - - - - - - - - CUSTOMIZING URL - - - - - - - - - - - 
+// URL to be customized
+const urlToCustomize = "https://get-url-from-document" // document.getElementById("shorten-url")
+const newName = "https://get-from-user-input"
+// link to customize URL
+// const customizeLnkBtn = document.getElementById("customize-url-btn");
+
+async function customizeUrl() {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/{url}?url=${urlToCustomize}&new_address=${newName}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw Error(response.statusText);
+        } else {
+            const data = await response.json();
+            console.log(data);
+        }
+    } catch (error) {
+        console.error("Error fetching data: ", error);
+    }
+}
+
+
+// - - - - - - - - - - - FORWARDING SHORT URL TO IT'S TARGET - - - - - - - - - - - 
