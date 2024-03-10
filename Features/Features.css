@@ -131,15 +131,13 @@ h1, h2 {
 
 .main a {
     color: white;
-    /* position: absolute; */
-    /* margin-top: 3em; */
     margin-left: 2em;
-    padding-top: 5px;
+    padding-top: 4px;
     font-family: sans-serif;
     font-size: 20px;
     background-color: rgb(224, 159, 18);
     width: 180px;
-    padding-left: 15px;
+    padding-left: 35px;
     border-radius: 30px;
     font-weight: lighter;
 }
@@ -195,7 +193,8 @@ h1, h2 {
 }
 
 .card span {
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .card-items {
@@ -211,10 +210,29 @@ h1, h2 {
 
 @media screen and (max-width:1556px) {
 
+    .navbar ul hu {
+        margin-left: 40px;
+    
+    }
+
+
 }
 
 
-@media (min-width:300px) and (max-width:1121px) {
+@media (min-width:1122px) and (max-width:1556px) {
+
+    .navbar ul hu {
+        margin-left: 20em;
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 30px;
+    
+    }
+
+}
+
+
+@media (min-width:100px) and (max-width:1121px) {
 
     .card-1 {
         color: white;
@@ -236,6 +254,44 @@ h1, h2 {
         max-width: 400px;
         margin: auto;
         gap: 50px;
+    }
+    
+
+    .navbar ul hu {
+        margin-left: 20em;
+        font-size: 10px;
+        font-weight: 600;
+        padding-top: 30px;
+    }
+
+    .main hm {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        gap: 2em;
+    }
+    
+    .main [type=text]{
+        width: 70%;
+        color: #FFFF;
+        margin: auto;
+        padding: 12px;
+        border-radius: 7px;
+        border: 2px solid gray;
+        background-color: transparent;
+       }
+    
+       .main a {
+        color: white;
+        margin: auto;
+        padding-top: 5px;
+        font-family: sans-serif;
+        font-size: 20px;
+        background-color: rgb(224, 159, 18);
+        width: 180px;
+        padding-left: 15px;
+        border-radius: 30px;
+        font-weight: lighter;
     }
     
     
