@@ -1,10 +1,11 @@
 // - - - - - - - - - - - URL SHORTENING - - - - - - - - - - - 
 // link to shorten
-const urlToShorten = document.getElementById("shorten-url")
 const shortenLnkBtn = document.getElementById("shorten-url-btn");
 
 console.log(urlToShorten.value);
 async function shortenUrl() {
+    const urlToShorten = document.getElementById("shorten-url")
+    
     try {
         const response = await fetch("http://127.0.0.1:8000/shorten-url", {
             method: "POST",
@@ -69,9 +70,57 @@ async function customizeUrl() {
             console.log(data);
         }
     } catch (error) {
-        console.error("Error fetching data: ", error);
+        console.error(`Error fetching data: ${error}`);
     }
 }
 
 
 // - - - - - - - - - - - FORWARDING SHORT URL TO IT'S TARGET - - - - - - - - - - - 
+
+
+
+// - - - - - - - - - - - DELETE SHORT URL - - - - - - - - - - - 
+urlToDelete = "get-from-user-input"
+
+async function deleteUrl() {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/${urlToDelete}/delete`, {
+            method: "DELETE",
+            headers: {
+                "Content-type": "application/json",
+            },
+        });
+        if (!resoponse.ok) {
+            throw Error(response.statusText);
+        } else {
+            const data = await response.json();
+            console.log(data);
+        }
+    } catch (error) {
+        console.error(`Error fetching data: ${error}`)
+    }
+}
+
+
+
+// - - - - - - - - - - -    RECOVER DELETED SHORT URL - - - - - - - - - - - 
+urlToRecover = "get-from-user-input"
+
+async function recoverUrl() {
+    try {
+        const response = await fetch(`http://127.0.0.1:8000/${urlToRecover}/delete`, {
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json",
+            },
+        });
+        if (!resoponse.ok) {
+            throw Error(response.statusText);
+        } else {
+            const data = await response.json();
+            console.log(data);
+        }
+    } catch (error) {
+        console.error(`Error fetching data: ${error}`)
+    }
+}

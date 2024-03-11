@@ -12,20 +12,14 @@
 
     <div class="navbar">
         <div class="container flex">
-
-            
-           
-
             <nav>
-    
-               
                 <ul> 
                     <li> <hi> <a href="/Scissor.html">Scissor<span>.io</span></a> </li> </hi>
                     <hu>
                     <li><a href="/Features/Features.html">Features</a></li>
                     <li><a href="features.html">Shorten URL</a></li>
                     <li><a href="../Simplicity/Simplicity.html">Customize URL</a></li>
-                    <li><a href="/Reach/Reach.html">Generate QRCode</a></li>
+                    <li><a href="./qrcode.html">Generate QRCode</a></li>
                     <li><a href="../Branding/Branding.html">Analytics</a></li>
                     <li><a href="../Insight/Insight.html"></a></li>
                     </hu>
@@ -36,16 +30,23 @@
 
 <div class="GIF">
     <h1>
-        Share your <span>links</span> easily across <br> various platforms with <span>QR codes.</span> 
+        Generate QRCode
     </h1>
-    
     <p>
-    <!-- <label for="">Full name</label> <br> -->
-    <input type="text" name="Full Name" id="" placeholder="Paste Your Link Here">
-
-    <a href="features.html" class="btn btn-outline">Shorten link</a>
+        Share your <span>links</span> easily across various platforms with <br> <span>QR codes.</span> 
+    </p>
     
-   </p>
+    <div class="generate">
+        <!-- <label for="">Full name</label> <br> -->
+        <input type="text" name="Full Name" id="" placeholder="Paste Your Shortened URL Here">
+        
+        <a href="features.html" class="btn btn-outline" id="g-qrcode">Generate QRCode</a>
+    </div>
+
+    <div class="qrcode-img">
+        <img alt="qr code">
+        <button class="download">Download</button>
+    </div>
 </div>
     
 </body>
