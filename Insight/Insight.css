@@ -110,7 +110,7 @@ h1, h2 {
 
 
 .GIF {
-    margin: 5em;
+    text-align: center;
 }
 
 .GIF h1 {
@@ -167,6 +167,8 @@ h1, h2 {
 
    .GIF p {
     display: flex;
+    justify-content: center;
+    margin-top: 5em;
    }
 
    .table-analysis {

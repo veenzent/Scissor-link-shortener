@@ -107,6 +107,11 @@ h1, h2 {
 
 /* ------------------This is showcase area------------------ */
 
+.custom-url {
+    margin: auto;
+    text-align: center;
+}
+
 
 .GIF {
     margin: 5em;
@@ -168,3 +173,48 @@ h1, h2 {
    .GIF p {
     display: flex;
    }
+
+
+   .domain {
+       display: flex;
+       gap: 10em;
+       justify-content: center;
+       margin: 5em 6em;
+    }
+    
+    .domain-block {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+   }
+
+
+   .domain [type=text]{
+    width: 150%;
+    height: 60px;
+    color: #FFFF;
+    padding: 12px;
+    border-radius: 7px;
+    border: 2px solid gray;
+    background-color: transparent;
+   }
+
+.submit button {
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(224, 159, 18);
+    font-size: larger;
+}
+
+.result {
+    display: none;
+    margin: 5em 6em;
+}
+
+#custom-url {
+    font-size: 58px;
+    color: white;
+}
