@@ -130,7 +130,8 @@ h1, h2 {
 }
 
 
-.GIF a {
+.GIF a,
+.download {
     color: white;
     /* margin-top: 3em; */
     /* margin-left: 2em; */
@@ -146,7 +147,7 @@ h1, h2 {
 
 
 .GIF [type=text]{
-    width: 50%;
+    width: 25%;
     height: 40px;
     color: #FFFF;
     padding: 12px;
@@ -176,10 +177,21 @@ h1, h2 {
     gap: 2em;
     margin-top: 3em;
     margin-inline: 2.5em;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
    }
 
    .qrcode-img {
-    /* display: none; */
+    display: none;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-top: 3em;
+    margin-inline: 2.5em;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   #qrcode {
+    width: 10%;
+    height: 10%;
    }
