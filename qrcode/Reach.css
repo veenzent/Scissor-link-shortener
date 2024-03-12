@@ -110,7 +110,12 @@ h1, h2 {
 
 
 .GIF {
-    margin: 5em;
+    /* margin: 5em; */
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .GIF h1 {
@@ -125,23 +130,24 @@ h1, h2 {
 }
 
 
-.GIF a {
+.GIF a,
+.download {
     color: white;
     /* margin-top: 3em; */
-    margin-left: 2em;
+    /* margin-left: 2em; */
     font-family: sans-serif;
     font-size: 20px;
     background-color: rgb(224, 159, 18);
-    width: 180px;
-    padding-left: 35px;
-    padding-top: 4px;
+    /* width: 180px; */
+    padding-inline: 35px;
+    padding-block: 4px;
     border-radius: 30px;
     font-weight: lighter;
 }
 
 
 .GIF [type=text]{
-    width: 20%;
+    width: 25%;
     height: 40px;
     color: #FFFF;
     padding: 12px;
@@ -166,6 +172,26 @@ h1, h2 {
     text-transform: capitalize;
    }
 
-   .GIF p {
+   .generate {
     display: flex;
+    gap: 2em;
+    margin-top: 3em;
+    margin-inline: 2.5em;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .qrcode-img {
+    display: none;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-top: 3em;
+    margin-inline: 2.5em;
+    justify-content: space-between;
+    align-items: center;
+   }
+
+   #qrcode {
+    width: 10%;
+    height: 10%;
    }
