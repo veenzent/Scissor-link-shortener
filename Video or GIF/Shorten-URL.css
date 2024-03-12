@@ -129,7 +129,7 @@ h1, h2 {
 .GIF a {
     color: white;
     padding-top: 10px;
-    margin-left: 2em; 
+    margin: 2em; 
     font-family: sans-serif;
     font-size: 20px;
     background-color: rgb(224, 159, 18);
@@ -171,46 +171,39 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
-    gap: 30px;
    }
 
 
-.domain-section {
+   /* -----------------------------This is the input section-------------------------- */
+
+   .input-section {
+    /* background-color: #047aed; */
+   }
+
+   .user-details {
     display: flex;
-    width: 100%;
-    margin-inline: auto;
     justify-content: center;
-}
-
-
-   .domain {
-    /* gap: 1em; */
-    display: flex;  
-    margin-block: 35px;
-    margin-inline: auto;
-    justify-content: space-between;
-    align-items: center;
-    width:60%;
-
-   }
-
-   .domain-block {
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-   }
-
-   .domain .details {
     
+
    }
 
-   .domain [type=text]{
-    width: 100%;
+   .input-box .details {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 10px 8em;
+
+
+
+   }
+
+   .input-box  [type=text]{
     height: 60px;
     color: #FFFF;
     padding: 12px;
     border-radius: 7px;
     border: 2px solid gray;
     background-color: transparent;
+    
    }
+
