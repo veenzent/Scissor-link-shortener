@@ -168,3 +168,7 @@ h1, h2 {
    .GIF p {
     display: flex;
    }
+
+   .table-analysis {
+    margin: 2em;
+   }
