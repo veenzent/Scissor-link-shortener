@@ -189,7 +189,11 @@ h1, h2 {
     margin-inline: 2.5em;
     justify-content: space-between;
     align-items: center;
-   }
+}
+
+#g-qrcode {
+    cursor: pointer;
+}
 
    #qrcode {
     width: 10%;

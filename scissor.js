@@ -25,10 +25,12 @@ async function shortenUrl() {
             responseEl.style.display = "flex";
 
             domainName.textContent = domain;
+            console.log(domainName.textContent)
             urlObject = new URL(data.shortened_url);
             address = urlObject.pathname.slice(1)
             shortUrlEl.textContent = address;
             shortUrlEl.href = data.shortened_url;
+            console.log(address)
             console.log(data);
         }
     } catch (error) {
@@ -42,8 +44,6 @@ shortenLnkBtn.addEventListener("click", shortenUrl);
 
 // - - - - - - - - - - - CREATING QR CODE - - - - - - - - - - - 
 const generateQrBtn = document.getElementById("g-qrcode")
-// link to generate QR Code for:
-
 async function generateQrCode() {
     const urlForQRCode = document.getElementById("url-for-qrcode").value;
     const imgBlock = document.getElementById("qrcode-img");
