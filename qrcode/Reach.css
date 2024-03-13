@@ -181,7 +181,7 @@ h1, h2 {
     align-items: center;
    }
 
-   .qrcode-img {
+   #qrcode-img {
     display: none;
     flex-direction: column;
     gap: 2.5em;

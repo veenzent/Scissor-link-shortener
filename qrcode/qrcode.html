@@ -47,14 +47,14 @@
     <!-- Will be dynamically displayed from JS (display: flex;) -->
     <div class="generate">
         <!-- <label for="">Full name</label> <br> -->
-        <input type="text" name="Full Name" id="" placeholder="Paste Your Shortened URL Here">
+        <input type="text" name="Full Name" id="url-for-qrcode" placeholder="Paste Your Shortened URL Here">
         
         <a href="features.html" class="btn btn-outline" id="g-qrcode">Generate QRCode</a>
     </div>
 
-    <div class="qrcode-img">
+    <div id="qrcode-img">
         <img alt="qr code" id="qrcode" src="../scissor-url logo.png">
-        <button class="btn btn-outline download">Download</button>
+        <a href="#" class="btn btn-outline download" id="download">Download</a>
     </div>
 </div>
     
