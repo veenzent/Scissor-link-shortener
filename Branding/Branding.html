@@ -40,34 +40,36 @@
 <section class="custom-url">
     <div class="GIF">
         <h1>
-            Create custom <span>links</span> that reflect <br> your unique identity.
+            Create custom <span>links</span> that reflect <br> your unique brand.
         </h1>
         
     </div>
 
     <div class="domain">
-        
-        <div class="domain-block one">
-            <span> Domain</span>
-            <p id="domain">Domain Name</p>
-        </div>
-        
         <div class="domain-block">
-            <span>Address</span> 
-            <a href="#" id="trimmed-url">https://</a>
-            <!-- <a href="../Branding/Branding.html" class="customize-url">customize address</a> -->
+            <div class="domain-fd">
+                <span> Domain</span>
+                <p id="domain">Domain Name</p>
+            </div>
+            <div class="address-fd">
+                <span>Old Address</span>
+                <input type="text" name="Full Name" id="old-url" placeholder="Paste Your Link Here">
+                <span>New Address</span>
+                <input type="text" name="Full Name" id="new-url" placeholder="Paste Your Link Here">
+            </div>
         </div>
-    
+    </div>
     <div class="submit">
-        <button>Create Unique Address</button>
+        <button id="customize-url-btn">Create Unique Address</button>
     </div>
     
     <!-- Dynamically change display with JS (display: "block";) -->
-    <div class="result">
+    <div id="result">
         <a href="#" id="custom-url">kj;ghkjlgg</a>
     </div>
 </section>
 
-    
+<!-- <script src="../scissor.js"></script> -->
+<script src="./customize.js"></script>
 </body>
 </html>

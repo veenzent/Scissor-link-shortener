@@ -185,17 +185,17 @@ h1, h2 {
 
 
 .domain {
-    gap: 8em;
-    display: flex;  
+    gap: 11em;
+    display: flex;
     margin-block: 35px;
-    margin-inline: auto;
-    justify-content: center;
+    margin: auto;
+    justify-content: space-around;
     align-items: center;
     width:60%;
 }
 
    .one {
-    margin-block-end: 2.5em;
+    margin-block-end: 2.1em;
    }
 
    .domain-block {
@@ -214,10 +214,6 @@ h1, h2 {
     border-radius: 7px;
     background-color: transparent;
    }
-
-
-   /* .domain [type=text]{
-   } */
 
    .customize-url {
     color: lightblue;

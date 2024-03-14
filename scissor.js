@@ -25,12 +25,11 @@ async function shortenUrl() {
             responseEl.style.display = "flex";
 
             domainName.textContent = domain;
-            console.log(domainName.textContent)
             urlObject = new URL(data.shortened_url);
-            address = urlObject.pathname.slice(1)
+            address = urlObject.pathname.slice(1);
             shortUrlEl.textContent = address;
             shortUrlEl.href = data.shortened_url;
-            console.log(address)
+            console.log(address);
             console.log(data);
         }
     } catch (error) {
@@ -40,6 +39,46 @@ async function shortenUrl() {
 
 shortenLnkBtn.addEventListener("click", shortenUrl);
 
+
+
+// - - - - - - - - - - - CUSTOMIZING URL - - - - - - - - - - - 
+// link to customize URL
+const customizeLnkBtn = document.getElementById("customize-url-btn");
+async function customizeUrl() {
+    console.log(domain)
+    // URL to be customized
+    const oldAddress = document.getElementById("old-url")
+    const newAddress = document.getElementById("new-url")
+    const key = "127.0.0.1:8000/EXEUS"
+    // Regex to match a valid URL
+    // const urlRegex = /^(http|https):\/\/[^\s]+/;
+    // if (!urlRegex.test(oldAddress.value)) {
+    //     const key = oldAddress.value
+    //     console.log(`key without splitting: ${key}`)
+    // } else {
+    //     const key = oldAddress.value.split("/").pop();
+    // console.log(`key from splitting: ${key}`)
+    // }
+    // console.log(`New address value: ${newAddress.value}`)
+
+    try {
+        const response = await fetch(`${domain}{url}?url=${key}&new_address=${newAddress.value}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw Error(response.statusText);
+        } else {
+            const data = await response.json();
+            console.log(data);
+        }
+    } catch (error) {
+        console.error(`Error fetching data: ${error}`);
+    }
+}
+customizeLnkBtn.addEventListener("click", customizeUrl());
 
 
 // - - - - - - - - - - - CREATING QR CODE - - - - - - - - - - - 
@@ -70,34 +109,8 @@ async function generateQrCode() {
         console.log(data);
     }
 }
-generateQrBtn.addEventListener("click", generateQrCode)
+// generateQrBtn.addEventListener("click", generateQrCode)
 
-
-// - - - - - - - - - - - CUSTOMIZING URL - - - - - - - - - - - 
-// URL to be customized
-const urlToCustomize = "https://get-url-from-document" // document.getElementById("shorten-url")
-const newName = "https://get-from-user-input"
-// link to customize URL
-// const customizeLnkBtn = document.getElementById("customize-url-btn");
-
-async function customizeUrl() {
-    try {
-        const response = await fetch(`${domain}{url}?url=${urlToCustomize}&new_address=${newName}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-        if (!response.ok) {
-            throw Error(response.statusText);
-        } else {
-            const data = await response.json();
-            console.log(data);
-        }
-    } catch (error) {
-        console.error(`Error fetching data: ${error}`);
-    }
-}
 
 
 // - - - - - - - - - - - FORWARDING SHORT URL TO IT'S TARGET - - - - - - - - - - - 

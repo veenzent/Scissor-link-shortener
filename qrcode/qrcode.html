@@ -44,20 +44,20 @@
         Share your <span>links</span> easily across various platforms with <br> <span>QR codes.</span> 
     </p>
     
-    <!-- Will be dynamically displayed from JS (display: flex;) -->
     <div class="generate">
         <!-- <label for="">Full name</label> <br> -->
         <input type="text" name="Full Name" id="url-for-qrcode" placeholder="Paste Your Shortened URL Here">
         
         <button class="btn btn-outline download" id="g-qrcode">Generate QRCode</button>
     </div>
-
+    
+    <!-- Will be dynamically displayed from JS (display: flex;) -->
     <div id="qrcode-img">
         <img alt="qr code" id="qrcode" src="../scissor-url logo.png">
         <a href="#" class="btn btn-outline download" id="download">Download</a>
     </div>
 </div>
 
-<script src="../scissor.js"></script>
+<script src="./qrcode.js"></script>
 </body>
 </html>

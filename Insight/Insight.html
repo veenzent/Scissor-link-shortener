@@ -44,13 +44,32 @@
     
     <p>
     <!-- <label for="">Full name</label> <br> -->
-    <input type="text" name="Full Name" id="" placeholder="Paste Your Short Link to Track">
+    <input type="text" name="Full Name" id="short-url" placeholder="Paste Your Short Link to Track">
 
-    <a href="features.html" class="btn btn-outline">Get Analysis</a>
+    <a href="#" class="btn btn-outline" id="get-analysis-btn">Get Analysis</a>
     
    </p>
 </div>
-
-
+<div class="div-table" id="div-table">
+    <table>
+        <tr>
+            <th>Short Url</th>
+            <th>Active</th>
+            <th>Clicks</th>
+            <th>Target Url</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td id="short-url-result">exit
+                    
+                </td>
+                <td id="state"></td>
+                <td id="clicks"></td>
+                <td id="target-url"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="./analytics.js"></script>
 </body>
 </html>

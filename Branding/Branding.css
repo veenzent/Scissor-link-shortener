@@ -109,12 +109,13 @@ h1, h2 {
 
 .custom-url {
     margin: auto;
+    width: 70%;
     text-align: center;
 }
 
 
 .GIF {
-    margin: 5em;
+    margin: 3em;
 }
 
 .GIF h1 {
@@ -177,29 +178,37 @@ h1, h2 {
 
    .domain {
        display: flex;
-       align-items: center;
-       gap: 10em;
+       flex-direction: column;
        justify-content: center;
-       margin: 5em 6em;
+       align-items: center;
+       margin: 2em;
     }
     
     .domain-block {
        display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: center;
-   }
+       justify-content: space-between;
+       width: 70%;
+       align-items: center;
+       text-align: left;
+    }
 
+.domain-fd,
+.address-fd {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
 
-   .domain [type=text]{
-    width: 150%;
-    height: 60px;
-    color: #FFFF;
-    padding: 12px;
-    border-radius: 7px;
-    border: 2px solid gray;
-    background-color: transparent;
-   }
+.domain-fd p,
+.address-fd input {
+ width: 180%;
+ border: 2px solid gray;
+ height: 60px;
+ color: #FFFF;
+ padding: 12px;
+ border-radius: 7px;
+ background-color: transparent;
+}
 
 .submit button {
     height: 50px;
@@ -208,25 +217,16 @@ h1, h2 {
     color: white;
     background-color: rgb(224, 159, 18);
     font-size: larger;
+    cursor: pointer;
 }
 
-.result {
+#result {
     display: none;
-    margin: 5em 6em;
+    margin: 1em;
 }
 
 #custom-url {
     font-size: 58px;
+    font-weight: bolder;
     color: white;
-}
-
-.domain-block p,
-#trimmed-url {
- width: 180%;
- border: 2px solid gray;
- height: 60px;
- color: #FFFF;
- padding: 12px;
- border-radius: 7px;
- background-color: transparent;
 }
