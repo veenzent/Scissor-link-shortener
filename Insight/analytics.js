@@ -1,4 +1,5 @@
-const domain = `http://127.0.0.1:8000/`
+// const domain = `http://127.0.0.1:8000/`
+const domain = `https://scissor-url.onrender.com/`
 
 function getKey(url) {
     // Regex to match a valid URL

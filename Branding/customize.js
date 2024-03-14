@@ -1,4 +1,5 @@
-const domain = `http://127.0.0.1:8000/`
+// const domain = `http://127.0.0.1:8000/`
+const domain = `https://scissor-url.onrender.com/`
 const domainName = document.getElementById("domain");
 domainName.innerHTML = domain
 
@@ -36,7 +37,8 @@ async function customizeUrl() {
         } else {
             const data = await response.json();
             resultDisplay.style.display = "block";
-            address.innerHTML = data.shortened_url;
+            // address.innerHTML = data.shortened_url;
+            address.innerHTML = `${domain}${newAddress.value}`;
             address.href = data.shortened_url
             address.target = "_blank";
             console.log(data);
