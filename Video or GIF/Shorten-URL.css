@@ -177,7 +177,7 @@ h1, h2 {
    /* -----------------------------This is the input section-------------------------- */
 
    .domain-section {
-    display: flex;
+    display: none;
     width: 100%;
     margin-inline: auto;
     justify-content: center;
@@ -204,17 +204,21 @@ h1, h2 {
     flex-direction: column;
    }
 
-
-   .domain [type=text]{
-    width: 150%;
+   .domain-block p,
+   #trimmed-url {
+    width: 180%;
+    border: 2px solid gray;
     height: 60px;
     color: #FFFF;
     padding: 12px;
     border-radius: 7px;
-    border: 2px solid gray;
     background-color: transparent;
    }
 
+
+   /* .domain [type=text]{
+   } */
+
    .customize-url {
-    color: blue;
+    color: lightblue;
    }

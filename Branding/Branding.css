@@ -177,6 +177,7 @@ h1, h2 {
 
    .domain {
        display: flex;
+       align-items: center;
        gap: 10em;
        justify-content: center;
        margin: 5em 6em;
@@ -217,4 +218,15 @@ h1, h2 {
 #custom-url {
     font-size: 58px;
     color: white;
+}
+
+.domain-block p,
+#trimmed-url {
+ width: 180%;
+ border: 2px solid gray;
+ height: 60px;
+ color: #FFFF;
+ padding: 12px;
+ border-radius: 7px;
+ background-color: transparent;
 }
