@@ -17,6 +17,7 @@ async function generateQrCode() {
     })
     
     if (!response.ok) {
+        alert(`Error fetching data: ${Error(response.statusText)}`);
         throw Error(response.statusText);
     }
     

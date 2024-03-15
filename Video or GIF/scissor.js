@@ -20,6 +20,7 @@ async function shortenUrl() {
             body: JSON.stringify({ target_url: urlToShorten.value }),
         });
         if (!response.ok) {
+            alert(`Error fetching data: ${Error(response.statusText)}`);
             throw Error(response.statusText);
         } else {
             const data = await response.json();
@@ -30,11 +31,12 @@ async function shortenUrl() {
             address = urlObject.pathname.slice(1);
             shortUrlEl.textContent = address;
             shortUrlEl.href = data.shortened_url;
-            console.log(address);
-            console.log(data);
+            // console.log(address);
+            // console.log(data);
         }
     } catch (error) {
             console.error("Error fetching data: ", error);
+            alert(`Error fetching data: ${error}`);
         }
 }
 

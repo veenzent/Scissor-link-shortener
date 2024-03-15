@@ -35,6 +35,7 @@ async function getAnalytics() {
             }
         });
         if (!response.ok) {
+            alert(`Error fetching data: ${Error(response.statusText)}`);
             throw Error(response.statusText);
         } else {
             const data = await response.json();

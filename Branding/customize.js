@@ -33,18 +33,20 @@ async function customizeUrl() {
             },
         });
         if (!response.ok) {
+            alert(`Error fetching data: ${Error(response.statusText)}`);
             throw Error(response.statusText);
         } else {
             const data = await response.json();
             resultDisplay.style.display = "block";
             // address.innerHTML = data.shortened_url;
             address.innerHTML = `${domain}${newAddress.value}`;
-            address.href = data.shortened_url
+            address.href = data.shortened_url;
             address.target = "_blank";
             console.log(data);
-        }
+        };
     } catch (error) {
         console.error(`Error fetching data: ${error}`);
+        alert(`Error fetching data: ${error}`);
     }
 }
 customizeLnkBtn.addEventListener("click", customizeUrl);
