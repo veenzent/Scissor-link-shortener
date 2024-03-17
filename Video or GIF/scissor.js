@@ -31,8 +31,7 @@ async function shortenUrl() {
             address = urlObject.pathname.slice(1);
             shortUrlEl.textContent = address;
             shortUrlEl.href = data.shortened_url;
-            // console.log(address);
-            // console.log(data);
+            shortUrlEl.target = "_blank";
         }
     } catch (error) {
             console.error("Error fetching data: ", error);

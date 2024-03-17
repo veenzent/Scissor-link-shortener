@@ -35,8 +35,8 @@ async function getAnalytics() {
             }
         });
         if (!response.ok) {
-            alert(`Error fetching data: ${Error(response.statusText)}`);
-            throw Error(response.statusText);
+            data = await response.json();
+            alert(`Error: ${data.detail}`);
         } else {
             const data = await response.json();
             tableBlock.style.display = "block";

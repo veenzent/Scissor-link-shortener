@@ -17,8 +17,8 @@ async function generateQrCode() {
     })
     
     if (!response.ok) {
-        alert(`Error fetching data: ${Error(response.statusText)}`);
-        throw Error(response.statusText);
+        data = await response.json()
+        alert(`Error: ${data.detail}`);
     }
     
     const objectURL = await response.blob().then((myBlob) => URL.createObjectURL(myBlob));

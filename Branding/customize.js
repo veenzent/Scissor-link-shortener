@@ -33,8 +33,8 @@ async function customizeUrl() {
             },
         });
         if (!response.ok) {
-            alert(`Error fetching data: ${Error(response.statusText)}`);
-            throw Error(response.statusText);
+            data = await response.json();
+            alert(`Error fetching data: ${data.detail}`);
         } else {
             const data = await response.json();
             resultDisplay.style.display = "block";
