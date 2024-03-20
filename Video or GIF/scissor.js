@@ -1,5 +1,5 @@
-// const domain = `http://127.0.0.1:8000/`
-const domain = `https://scissor-url.onrender.com/`
+const domain = `http://127.0.0.1:8000/`
+// const domain = `https://scissor-url.onrender.com/`
 
 // - - - - - - - - - - - URL SHORTENING - - - - - - - - - - - 
 // link to shorten
@@ -20,8 +20,8 @@ async function shortenUrl() {
             body: JSON.stringify({ target_url: urlToShorten.value }),
         });
         if (!response.ok) {
-            alert(`Error fetching data: ${Error(response.statusText)}`);
-            throw Error(response.statusText);
+            data = await response.json()
+            alert(`Error fetching data: ${data.detail}`);
         } else {
             const data = await response.json();
             responseEl.style.display = "flex";

@@ -110,14 +110,18 @@ h1, h2 {
 
 
 .GIF {
-    margin: 5em;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-block-start: 5em;
 }
 
 .GIF h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 80px;
+    padding-block: 1em;
 }
 
 .GIF span {
@@ -168,4 +172,16 @@ h1, h2 {
 
    .GIF p {
     display: flex;
+    justify-content: center;
    }
+
+.del_message {
+    display: none;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    padding-block: 2em;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(134, 165, 177);
+}
