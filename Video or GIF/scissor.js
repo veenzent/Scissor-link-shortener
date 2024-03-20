@@ -1,5 +1,5 @@
-const domain = `http://127.0.0.1:8000/`
-// const domain = `https://scissor-url.onrender.com/`
+// const domain = `http://127.0.0.1:8000/`
+const domain = `https://scissor-url.onrender.com/`
 
 // - - - - - - - - - - - URL SHORTENING - - - - - - - - - - - 
 // link to shorten
